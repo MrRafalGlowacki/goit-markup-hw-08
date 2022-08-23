@@ -1,0 +1,27 @@
+.what-we-do {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  gap: 30px;
+  & img {
+    display: block;
+  }
+  &__items {
+    position: relative;
+    & p {
+      position: absolute;
+      bottom: 0;
+      margin: 0;
+      width: 370px;
+      height: 70px;
+      font-size: getFS(f14);
+      font-weight: getFW(w700);
+      line-height: getLH(lh114);
+      letter-spacing: 3%;
+      text-align: center;
+      color: getColor(mwhite);
+      padding-top: 27px;
+      background-color: getColor(backgroundwhatwedo80);
+    }
+  }
+}

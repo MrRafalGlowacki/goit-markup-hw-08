@@ -1,0 +1,27 @@
+.client {
+  &__container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  &__logo {
+    width: 170px;
+    height: 92px;
+    border-radius: 4px;
+    border: 1px solid getColor(svggray);
+    fill: getColor(svggray);
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition-property: border-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: getColor(main);
+      fill: getColor(main);
+    }
+  }
+}

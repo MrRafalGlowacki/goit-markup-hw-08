@@ -1,0 +1,15 @@
+.logo {
+  font-family: getFF(firstaltarnative), getFF(logoalternative), getFF(sans-serif);
+  font-weight: getFW(w700);
+  font-size: getFS(f26);
+  line-height: getLH(lh117), getLH(lh138);
+  letter-spacing: 3%;
+  text-decoration: none;
+  color: getColor(main);
+  &__studio-header {
+    color: getColor(logoheader);
+  }
+  &__studio-footer {
+    color: getColor(mwhite);
+  }
+}

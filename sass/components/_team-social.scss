@@ -1,0 +1,38 @@
+.team__social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+
+  & li {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: getColor(main);
+    }
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  & svg {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    fill: getColor(svggray);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:active,
+    &:focus {
+      fill: getColor(mwhite);
+    }
+  }
+}

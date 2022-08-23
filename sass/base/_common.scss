@@ -1,0 +1,20 @@
+body {
+    font-family: "Roboto", "Raleway", sans-serif;
+    color: getColor(mblack);
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  ul {
+    list-style: none;
+  }
+  .header-secondary {
+    font-weight: getFW(w700);
+    font-size: getFS(f36);
+    line-height: getLH(lh117);
+    letter-spacing: 3%;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  

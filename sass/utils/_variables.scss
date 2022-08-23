@@ -1,0 +1,70 @@
+$color: (
+  "main": #2196f3,
+  "main90": #2196f3e6,
+  "maindarker": #0f72c4,
+  "secondary": #757575,
+  "mblack": #212121,
+  "mwhite": #ffffff,
+  "swhite": #f5f4fa,
+  "logoheader": #000000,
+  "svggray": #afb1b8,
+  "white60": #ffffff99,
+  "white30": #ffffff4d,
+  "white10": #ffffff1a,
+  "backgroundfooterheader": #2f303a,
+  "backgroundwhatwedo80": #2f303acc,
+  "form-input": #15008a33,
+  "closebtnborder": #0000001a,
+  "textareaborder": #21212133,
+  "secondary50": #75757580,
+  "headerbottomline": #ececec,
+  "cardsborder": #eeeeee,
+);
+@function getColor($key) {
+  @return map-get($color, $key);
+}
+$fontsize: (
+  "f12": 12px,
+  "f14": 14px,
+  "f16": 16px,
+  "f18": 18px,
+  "f20": 20px,
+  "f26": 26px,
+  "f36": 36px,
+  "f44": 44px,
+);
+@function getFS($key) {
+  @return map-get($fontsize, $key);
+}
+$lineheight: (
+  "lh114": 1.14,
+  "lh115": 1.15,
+  "lh117": 1.17,
+  "lh125": 1.25,
+  "lh136": 1.36,
+  "lh156": 1.56,
+  "lh138": 1.38,
+  "lh1625":1.625,
+  "lh171": 1.71,
+  "lh1875": 1.875,
+  "lh2": 2,
+);
+@function getLH($key) {
+  @return map-get($lineheight, $key);
+}
+$fontweight: (
+  "w500": 500,
+  "w700": 700,
+  "w900": 900,
+);
+@function getFW($key) {
+  @return map-get($fontweight, $key);
+}
+$fontfamily: (
+  "firstaltarnative": "Raleway",
+  "logoalternative": "Oleo Script",
+  "sans-serif": sans-serif,
+);
+@function getFF($key) {
+  @return map-get($fontfamily, $key);
+}
