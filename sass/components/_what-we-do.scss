@@ -1,27 +1,47 @@
 .what-we-do {
-  display: flex;
-  padding: 0;
-  justify-content: center;
-  gap: 30px;
-  & img {
-    display: block;
-  }
-  &__items {
-    position: relative;
-    & p {
-      position: absolute;
-      bottom: 0;
-      margin: 0;
-      width: 370px;
-      height: 70px;
-      font-size: getFS(f14);
-      font-weight: getFW(w700);
-      line-height: getLH(lh114);
-      letter-spacing: 3%;
-      text-align: center;
-      color: getColor(mwhite);
-      padding-top: 27px;
-      background-color: getColor(backgroundwhatwedo80);
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .what-we-do {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    gap: 30px;
+    & img {
+      display: block;
     }
+    &__items {
+      position: relative;
+      & p {
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        width: 370px;
+        height: 70px;
+        font-size: getFS(f14);
+        font-weight: getFW(w700);
+        line-height: getLH(lh114);
+        letter-spacing: 3%;
+        text-align: center;
+        color: getColor(mwhite);
+        padding-top: 27px;
+        background-color: getColor(backgroundwhatwedo80);
+      }
+    }
+  }
+}
+.no-display {
+  visibility: hidden;
+}
+@media screen and (min-width: 1200px) {
+  .no-display {
+    visibility: visible;
+  }
+  .what-we-do__section {
+    min-width: 320px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 94px 15px;
   }
 }

@@ -1,16 +1,17 @@
 .client {
   &__container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
   }
   &__logo {
-    width: 170px;
+    width: 210px;
     height: 92px;
     border-radius: 4px;
     border: 1px solid getColor(svggray);
     fill: getColor(svggray);
-    padding: 16px 32px;
+    padding: 16px 52px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -25,3 +26,49 @@
     }
   }
 }
+@media screen and (min-width: 768px) {
+  .client {
+    &__logo {
+      width: 226px;
+      padding: 16px 60px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client {
+    &__container {
+      flex-wrap: nowrap;
+    }
+    &__logo {
+      width: 170px;
+      padding: 16px 32px;
+    }
+  }
+}
+// .client {
+//   &__container {
+//     display: flex;
+//     justify-content: center;
+//     gap: 30px;
+//   }
+//   &__logo {
+//     width: 170px;
+//     height: 92px;
+//     border-radius: 4px;
+//     border: 1px solid getColor(svggray);
+//     fill: getColor(svggray);
+//     padding: 16px 32px;
+//     justify-content: center;
+//     align-items: center;
+//     display: flex;
+//     transition-property: border-color, fill;
+//     transition-duration: 250ms;
+//     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+//     &:hover,
+//     &:focus,
+//     &:active {
+//       border-color: getColor(main);
+//       fill: getColor(main);
+//     }
+//   }
+// }

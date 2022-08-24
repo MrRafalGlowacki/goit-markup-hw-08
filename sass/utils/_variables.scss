@@ -1,7 +1,7 @@
 $color: (
   "main": #2196f3,
   "main90": #2196f3e6,
-  "maindarker": #0f72c4,
+  "maindarker": #188ce8,
   "secondary": #757575,
   "mblack": #212121,
   "mwhite": #ffffff,
@@ -23,13 +23,16 @@ $color: (
 @function getColor($key) {
   @return map-get($color, $key);
 }
+
 $fontsize: (
   "f12": 12px,
   "f14": 14px,
   "f16": 16px,
   "f18": 18px,
   "f20": 20px,
+  "f24": 24px,
   "f26": 26px,
+  "f28": 28px,
   "f36": 36px,
   "f44": 44px,
 );
@@ -44,7 +47,8 @@ $lineheight: (
   "lh136": 1.36,
   "lh156": 1.56,
   "lh138": 1.38,
-  "lh1625":1.625,
+  "lh1625": 1.625,
+  "lh162": 1.62,
   "lh171": 1.71,
   "lh1875": 1.875,
   "lh2": 2,
