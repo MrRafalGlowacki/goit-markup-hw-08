@@ -649,7 +649,7 @@ ul {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .cards__wrapper:last-child {
-    justify-content: flex-start;
+    justify-content: left;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -743,7 +743,9 @@ ul {
   line-height: 1.25;
   letter-spacing: 3%;
   text-align: left;
-  width: 450px;
+  max-width: 450px;
+  min-width: 320px;
+  width: 95vw;
   height: 50px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3019607843);
