@@ -4,6 +4,7 @@ $color: (
   "maindarker": #188ce8,
   "secondary": #757575,
   "mblack": #212121,
+  "mblack20": #21212133,
   "mwhite": #ffffff,
   "swhite": #f5f4fa,
   "logoheader": #000000,
@@ -33,7 +34,9 @@ $fontsize: (
   "f24": 24px,
   "f26": 26px,
   "f28": 28px,
+  "f34": 34px,
   "f36": 36px,
+  "f40": 40px,
   "f44": 44px,
 );
 @function getFS($key) {
@@ -43,6 +46,7 @@ $lineheight: (
   "lh114": 1.14,
   "lh115": 1.15,
   "lh117": 1.17,
+  "lh122": 1.22,
   "lh125": 1.25,
   "lh136": 1.36,
   "lh156": 1.56,

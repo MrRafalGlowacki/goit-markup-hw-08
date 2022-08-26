@@ -1,0 +1,109 @@
+.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: getColor(mwhite);
+  z-index: 999;
+  transition-property: transform;
+  transform: translateX(170%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &__container {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    height: 100%;
+  }
+  &__close-btn {
+    display: flex;
+    justify-content: right;
+    & svg {
+      cursor: pointer;
+      transition-property: fill;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover,
+      &:focus {
+        fill: getColor(main);
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    flex-grow: 1;
+    
+    &-link {
+      text-decoration: none;
+      font-size: getFS(f40);
+      font-weight: getFW(w500);
+      line-height: getLH(lh117);
+      letter-spacing: 0.02em;
+      color: getColor(mblack);
+      
+      transition-property: color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover,
+      &:active {
+        color: getColor(main);
+      }
+    }
+  }
+  &__contacts {
+    display: grid;
+    &-phone {
+      font-size: getFS(f34);
+      font-weight: getFW(w500);
+      line-height: getLH(lh117);
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: getColor(main);
+      margin-bottom: 32px;
+      // text-align: left;
+    }
+    &-mail {
+      font-size: getFS(f24);
+      font-weight: getFW(w500);
+      line-height: getLH(lh117);
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: getColor(secondary);
+      margin-bottom: 64px;
+    }
+  }
+  &__social {
+    display: flex;
+    justify-content: center;
+    padding-inline-start: 0;
+    &-link {
+      font-size: getFS(f18);
+      font-weight: getFW(w500);
+      line-height: getLH(lh122);
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: getColor(main);
+    }
+    & li:not(:last-child) {
+      padding-right: 10px;
+      border-right: solid 1px getColor(mblack20);
+    }& li:not(:first-child) {
+    padding-left: 10px;
+  }
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.mobile.is-open {
+  transform: translateX(0);
+}

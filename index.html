@@ -54,6 +54,11 @@
             +48 111 111 111
           </a>
         </div>
+        <div class="header__menu-mbl js-open-menu">
+          <svg width="24" height="16">
+            <use href="images/icons.svg#menu_mobile"></use>
+          </svg>
+        </div>
       </div>
     </header>
     <main>
@@ -361,32 +366,33 @@
             </li>
             <li>
               <figure class="team__members">
-                <picture><source
-                  srcset="
-                    images/mobile/img4.jpg    1x,
-                    images/mobile/img4@2x.jpg 2x
-                  "
-                  media="(max-width:767px)"
-                />
-                <source
-                  srcset="
-                    images/tablet/img4.jpg    1x,
-                    images/tablet/img4@2x.jpg 2x
-                  "
-                  media="(max-width:1199px)"
-                />
-                <source
-                  srcset="
-                    images/desktop/img4.jpg    1x,
-                    images/desktop/img4@2x.jpg 2x
-                  "
-                  media="(min-width:1200px)"
-                />
-                <img
-                  src="images/desktop/img4.jpg"
-                  alt="picture of John Doe"
-                  
-                /></picture>
+                <picture
+                  ><source
+                    srcset="
+                      images/mobile/img4.jpg    1x,
+                      images/mobile/img4@2x.jpg 2x
+                    "
+                    media="(max-width:767px)"
+                  />
+                  <source
+                    srcset="
+                      images/tablet/img4.jpg    1x,
+                      images/tablet/img4@2x.jpg 2x
+                    "
+                    media="(max-width:1199px)"
+                  />
+                  <source
+                    srcset="
+                      images/desktop/img4.jpg    1x,
+                      images/desktop/img4@2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
+                  <img
+                    src="images/desktop/img4.jpg"
+                    alt="picture of John Doe"
+                  />
+                </picture>
 
                 <figcaption>
                   <p class="team__names">John Doe</p>
@@ -613,7 +619,46 @@
       </div>
     </div>
 
-    <script src="./js/modal.js"></script>
+    <div class="mobile js-menu-container">
+      <div class="js-close-menu mobile__close-btn">
+        <svg class="" width="19" height="19">
+          <use href="images/icons.svg#close_24px"></use>
+        </svg>
+      </div>
+      <div class="mobile__container">
+        <ul class="mobile__nav">
+          <li>
+            <a class="mobile__nav-link" href="index.html">Agencja</a>
+          </li>
+          <li>
+            <a class="mobile__nav-link" href="portfolio.html">Portfolio</a>
+          </li>
+          <li><a class="mobile__nav-link" href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <div class="mobile__contacts">
+          <a href="tel:+48111111111" class="mobile__contacts-phone">
+            +48 111 111 111
+          </a>
+          <a href="mailto:info@devstudio.com" class="mobile__contacts-mail">
+            info@devstudio.com</a
+          >
+        </div>
+        <ul class="mobile__social">
+          <li><a href="" class="mobile__social-link">Instagram</a></li>
+          <li><a href="" class="mobile__social-link">Twitter</a></li>
+          <li><a href="" class="mobile__social-link">Facebook</a></li>
+          <li><a href="" class="mobile__social-link">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

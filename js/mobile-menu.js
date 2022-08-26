@@ -1,7 +1,3 @@
-<div class='.js-menu-container .is-open'></div>
-<div class='.js-open-menu'></div>
-<div class='.js-close-menu'></div>
-
 (() => {
   const mobileMenu = document.querySelector(".js-menu-container");
   const openMenuBtn = document.querySelector(".js-open-menu");

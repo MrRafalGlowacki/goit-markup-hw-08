@@ -1,70 +1,181 @@
 .header {
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   height: 80px;
   &-border {
     border-bottom: 1px solid getColor(headerbottomline);
   }
-  &__nav {
-    display: flex;
-    width: 261px;
-    margin-right: 364px;
-    justify-content: space-between;
-    &-item {
-      color: getColor(mblack);
-      font-weight: getFW(w500);
-      font-size: getFS(f14);
-      line-height: getLH(lh117);
-      letter-spacing: 2%;
-      text-decoration: none;
-      transition-property: color;
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      &--active {
-        color: getColor(main);
-        position: relative;
-        &::after {
-          content: "";
-          height: 4px;
-          position: absolute;
-          background-color: getColor(main);
-          bottom: -32px;
-          left: 0;
-          right: 0;
-          border-radius: 2px;
-        }
-      }
-    }
-    & a:hover,
-    & a:focus {
-      color: getColor(main);
-    }
-  }
+  &__nav,
   &__contacts {
-    display: flex;
-    gap: 30px;
-    align-items: baseline;
-    &-link {
-      color: getColor(secondary);
-      font-weight: getFW(w500);
-      font-size: getFS(f14);
-      line-height: getLH(lh117);
-      letter-spacing: 2%;
-      text-decoration: none;
-      fill: getColor(secondary);
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      transition-property: color, fill;
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-      &:hover,
-      &:focus {
-        color: getColor(main);
-        fill: getColor(main);
-      }
+    display: none;
+  }
+  &__menu-mbl {
+    cursor: pointer;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      fill: getColor(main);
     }
   }
 }
+
+@media screen and (min-width: 768px) {
+  .header {
+    &__nav {
+      display: flex;
+      width: 282px;
+      // margin-right: 364px;
+      margin-right: 101px;
+      justify-content: space-between;
+
+      &-item {
+        color: getColor(mblack);
+        font-weight: getFW(w500);
+        font-size: getFS(f14);
+        line-height: getLH(lh117);
+        letter-spacing: 2%;
+        text-decoration: none;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &--active {
+          color: getColor(main);
+          position: relative;
+          &::after {
+            content: "";
+            height: 4px;
+            position: absolute;
+            background-color: getColor(main);
+            bottom: -32px;
+            left: 0;
+            right: 0;
+            border-radius: 2px;
+          }
+        }
+      }
+      & a:hover,
+      & a:focus {
+        color: getColor(main);
+      }
+    }
+    &__contacts {
+      display: block;
+      // display: flex;
+      // gap: 30px;
+      // align-items: baseline;
+      &-link {
+        color: getColor(secondary);
+        font-weight: getFW(w500);
+        font-size: getFS(f14);
+        line-height: getLH(lh117);
+        letter-spacing: 2%;
+        text-decoration: none;
+        fill: getColor(secondary);
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        transition-property: color, fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+
+        &:hover,
+        &:focus {
+          color: getColor(main);
+          fill: getColor(main);
+        }
+      }
+    }
+    &__menu-mbl {
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    &__nav {
+      width: 254px;
+      margin-right: 364px;
+    }
+    &__contacts {
+      display: flex;
+      gap: 30px;
+      align-items: baseline;
+    }
+  }
+}
+// .header {
+//   align-items: center;
+//   display: flex;
+//   justify-content: space-between;
+//   height: 80px;
+//   &-border {
+//     border-bottom: 1px solid getColor(headerbottomline);
+//   }
+// &__nav {
+//     display: flex;
+// width: 254px;
+// margin-right: 364px;
+//     justify-content: space-between;
+//     &-item {
+//       color: getColor(mblack);
+//       font-weight: getFW(w500);
+//       font-size: getFS(f14);
+//       line-height: getLH(lh117);
+//       letter-spacing: 2%;
+//       text-decoration: none;
+//       transition-property: color;
+//       transition-duration: 250ms;
+//       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+//       &--active {
+//         color: getColor(main);
+//         position: relative;
+//         &::after {
+//           content: "";
+//           height: 4px;
+//           position: absolute;
+//           background-color: getColor(main);
+//           bottom: -32px;
+//           left: 0;
+//           right: 0;
+//           border-radius: 2px;
+//         }
+//       }
+//     }
+//     & a:hover,
+//     & a:focus {
+//       color: getColor(main);
+//     }
+//   }
+// &__contacts {
+//   display: flex;
+//   gap: 30px;
+//   align-items: baseline;
+//     &-link {
+//       color: getColor(secondary);
+//       font-weight: getFW(w500);
+//       font-size: getFS(f14);
+//       line-height: getLH(lh117);
+//       letter-spacing: 2%;
+//       text-decoration: none;
+//       fill: getColor(secondary);
+//       display: flex;
+//       gap: 10px;
+//       align-items: center;
+//       transition-property: color, fill;
+//       transition-duration: 250ms;
+//       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+//       &:hover,
+//       &:focus {
+//         color: getColor(main);
+//         fill: getColor(main);
+//       }
+//     }
+//   }
+// }
